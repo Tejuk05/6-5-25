@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <main class="main-container">
+        <div class="form-container">
+            <form action="{{ url_for('submit_recipe') }}" method="POST" enctype="multipart/form-data">
+                <h2>Submit Your Recipe</h2>
+                <p>Share your culinary creations with our community.</p>
+
+                <div class="form-group">
+                    <label for="recipe-title">Recipe Title</label>
+                    <input type="text" name="recipe-title" id="recipe-title" placeholder="Enter your recipe title" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea name="description" id="description" placeholder="Describe your recipe" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="ingredients">Ingredients</label>
+                    <input type="text" name="ingredient" placeholder="Add ingredient">
+                </div>
+
+                <div class="form-group">
+                    <label for="instructions">Instructions</label>
+                    <textarea name="instruction" placeholder="Add instruction step" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="file-upload">Recipe Image</label>
+                    <div class="upload-container">
+                        <label for="file-upload" class="upload-btn">
+                            Upload a file
+                            <input type="file" name="file-upload" id="file-upload" class="file-input" required>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="submit" class="submit-btn">Submit Recipe</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
